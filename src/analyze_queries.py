@@ -7,6 +7,18 @@ import pandas as pd
 from categorizer import classify_message
 
 
+AUTOMATION_PLAYBOOK = {
+    "Order status": "Auto-fetch tracking from OMS and send live ETA updates.",
+    "Delivery delay": "Send proactive delay apology, revised ETA, and SLA coupon.",
+    "Refund request": "Auto-validate policy and create pre-filled refund workflow.",
+    "Product issue": "Collect SKU/batch/photos and route to QA replacement flow.",
+    "Subscription issue": "Offer self-serve pause/skip/cancel links instantly.",
+    "Payment failure": "Trigger smart retry flow with alternate payment options.",
+    "General product question": "Answer with AI FAQ retrieval from product knowledge base.",
+    "Other": "Route to triage queue for manual review and taxonomy expansion.",
+}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Analyze Beastlife customer queries")
     parser.add_argument(
@@ -31,6 +43,13 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_csv(input_path)
+
+    required_cols = {"timestamp", "customer_message", "channel"}
+    missing = required_cols.difference(df.columns)
+    if missing:
+        missing_str = ", ".join(sorted(missing))
+        raise ValueError(f"Input CSV is missing required columns: {missing_str}")
+
     df["timestamp"] = pd.to_datetime(df["timestamp"])
 
     predictions = df["customer_message"].apply(
@@ -56,6 +75,14 @@ def main() -> None:
         distribution["query_count"] / distribution["query_count"].sum() * 100
     ).round(2)
 
+    opportunities = distribution.copy()
+    opportunities["recommended_automation"] = opportunities["predicted_category"].map(
+        AUTOMATION_PLAYBOOK
+    )
+    opportunities["priority"] = opportunities["percentage"].apply(
+        lambda p: "High" if p >= 20 else "Medium" if p >= 8 else "Low"
+    )
+
     weekly = (
         df.groupby(
             ["predicted_category", pd.Grouper(key="timestamp", freq="W")],
@@ -78,12 +105,14 @@ def main() -> None:
     distribution.to_csv(output_dir / "issue_distribution.csv", index=False)
     weekly.to_csv(output_dir / "weekly_trends.csv", index=False)
     monthly.to_csv(output_dir / "monthly_trends.csv", index=False)
+    opportunities.to_csv(output_dir / "automation_opportunities.csv", index=False)
 
     summary = {
         "total_queries": int(len(df)),
         "categories_detected": int(distribution.shape[0]),
         "top_issue": distribution.iloc[0]["predicted_category"],
         "top_issue_percentage": float(distribution.iloc[0]["percentage"]),
+        "top_automation_opportunities": opportunities.head(3).to_dict(orient="records"),
         "classification_accuracy_vs_labels": round(float(accuracy), 4)
         if accuracy is not None
         else None,

@@ -17,6 +17,7 @@ classified_path = output_dir / "classified_queries.csv"
 distribution_path = output_dir / "issue_distribution.csv"
 weekly_path = output_dir / "weekly_trends.csv"
 monthly_path = output_dir / "monthly_trends.csv"
+opportunities_path = output_dir / "automation_opportunities.csv"
 
 if not all(p.exists() for p in [classified_path, distribution_path, weekly_path, monthly_path]):
     st.warning("Analytics files not found. Run: python src/analyze_queries.py")
@@ -26,6 +27,7 @@ classified = pd.read_csv(classified_path)
 distribution = pd.read_csv(distribution_path)
 weekly = pd.read_csv(weekly_path)
 monthly = pd.read_csv(monthly_path)
+opportunities = pd.read_csv(opportunities_path) if opportunities_path.exists() else None
 
 classified["timestamp"] = pd.to_datetime(classified["timestamp"])
 weekly["timestamp"] = pd.to_datetime(weekly["timestamp"])
@@ -81,6 +83,32 @@ channel_dist = (
 )
 channel_chart = px.bar(channel_dist, x="channel", y="query_count", title="Query volume by source channel")
 st.plotly_chart(channel_chart, use_container_width=True)
+
+st.subheader("Automation Opportunities")
+if opportunities is not None and not opportunities.empty:
+    st.dataframe(
+        opportunities[
+            [
+                "predicted_category",
+                "query_count",
+                "percentage",
+                "priority",
+                "recommended_automation",
+            ]
+        ].rename(
+            columns={
+                "predicted_category": "Issue Type",
+                "query_count": "Queries",
+                "percentage": "% of Queries",
+                "priority": "Priority",
+                "recommended_automation": "Automation Recommendation",
+            }
+        ),
+        use_container_width=True,
+        hide_index=True,
+    )
+else:
+    st.info("Run the latest analysis to generate automation recommendations.")
 
 st.subheader("Detailed Classified Queries")
 st.dataframe(

@@ -1,0 +1,8 @@
+predicted_category,query_count,percentage,recommended_automation,priority
+Order status,14,35.0,Auto-fetch tracking from OMS and send live ETA updates.,High
+Delivery delay,9,22.5,"Send proactive delay apology, revised ETA, and SLA coupon.",High
+Refund request,7,17.5,Auto-validate policy and create pre-filled refund workflow.,Medium
+Product issue,6,15.0,Collect SKU/batch/photos and route to QA replacement flow.,Medium
+Subscription issue,2,5.0,Offer self-serve pause/skip/cancel links instantly.,Low
+General product question,1,2.5,Answer with AI FAQ retrieval from product knowledge base.,Low
+Payment failure,1,2.5,Trigger smart retry flow with alternate payment options.,Low

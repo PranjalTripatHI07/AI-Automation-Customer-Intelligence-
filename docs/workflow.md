@@ -32,7 +32,8 @@ flowchart LR
    - High confidence + solvable issue -> automated response.
    - Low confidence / high-risk issues -> human escalation.
 5. **Persist all events** for analytics and continuous model improvement.
-6. **Visualize trends** by issue percentages and time windows (weekly/monthly).
+6. **Generate automation recommendations** based on issue volume and category.
+7. **Visualize trends** by issue percentages and time windows (weekly/monthly).
 
 ## 3) Category Taxonomy
 

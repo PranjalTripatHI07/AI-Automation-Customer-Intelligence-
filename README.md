@@ -73,6 +73,7 @@ Generated files:
 - `outputs/issue_distribution.csv`
 - `outputs/weekly_trends.csv`
 - `outputs/monthly_trends.csv`
+- `outputs/automation_opportunities.csv`
 - `outputs/summary.json`
 
 ## Launch Dashboard
@@ -87,6 +88,7 @@ The dashboard shows:
 2. Most common customer problems.
 3. Weekly/monthly trend lines by issue type.
 4. Channel mix (Instagram, WhatsApp, Email, Web chat).
+5. Recommended AI automation opportunities prioritized by issue volume.
 
 ## Current Sample Output
 

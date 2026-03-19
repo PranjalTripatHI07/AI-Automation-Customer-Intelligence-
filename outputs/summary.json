@@ -3,5 +3,28 @@
   "categories_detected": 7,
   "top_issue": "Order status",
   "top_issue_percentage": 35.0,
+  "top_automation_opportunities": [
+    {
+      "predicted_category": "Order status",
+      "query_count": 14,
+      "percentage": 35.0,
+      "recommended_automation": "Auto-fetch tracking from OMS and send live ETA updates.",
+      "priority": "High"
+    },
+    {
+      "predicted_category": "Delivery delay",
+      "query_count": 9,
+      "percentage": 22.5,
+      "recommended_automation": "Send proactive delay apology, revised ETA, and SLA coupon.",
+      "priority": "High"
+    },
+    {
+      "predicted_category": "Refund request",
+      "query_count": 7,
+      "percentage": 17.5,
+      "recommended_automation": "Auto-validate policy and create pre-filled refund workflow.",
+      "priority": "Medium"
+    }
+  ],
   "classification_accuracy_vs_labels": 1.0
 }
