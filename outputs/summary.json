@@ -1,0 +1,7 @@
+{
+  "total_queries": 40,
+  "categories_detected": 7,
+  "top_issue": "Order status",
+  "top_issue_percentage": 35.0,
+  "classification_accuracy_vs_labels": 1.0
+}

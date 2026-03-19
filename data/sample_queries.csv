@@ -1,0 +1,41 @@
+query_id,timestamp,channel,customer_message,true_category
+Q001,2026-01-03 09:12:00,Instagram DM,Hi where is my order BL10231 can you share tracking,Order status
+Q002,2026-01-04 11:48:00,WhatsApp,Order BL10255 still says processing any update,Order status
+Q003,2026-01-05 15:20:00,Email,Can I get the latest status for order BL10280,Order status
+Q004,2026-01-07 10:05:00,Website Chat,Please check status of my recent order BL10311,Order status
+Q005,2026-01-09 13:44:00,Instagram DM,Tracking link for BL10342 is not opening where is package,Order status
+Q006,2026-01-12 16:22:00,WhatsApp,I need shipment status for order BL10390,Order status
+Q007,2026-01-15 09:31:00,Email,Any update on my Beastlife order BL10420,Order status
+Q008,2026-01-18 18:04:00,Website Chat,Could you tell me if BL10471 has shipped,Order status
+Q009,2026-01-21 12:11:00,Instagram DM,My order shows in transit since Monday where is it now,Order status
+Q010,2026-01-25 08:56:00,WhatsApp,Need live tracking for BL10532,Order status
+Q011,2026-02-01 14:03:00,Email,Please share order status for BL10602,Order status
+Q012,2026-02-09 17:50:00,Website Chat,When will my order BL10678 be dispatched,Order status
+Q013,2026-02-15 10:17:00,Instagram DM,Order BL10723 is pending can you check,Order status
+Q014,2026-03-02 09:40:00,WhatsApp,Status update needed for order BL10811,Order status
+Q015,2026-01-06 12:40:00,Email,My parcel was due yesterday but still not delivered,Delivery delay
+Q016,2026-01-13 19:12:00,Instagram DM,Delivery is late by 3 days please help,Delivery delay
+Q017,2026-01-20 10:22:00,Website Chat,Shipment delayed again and no ETA from courier,Delivery delay
+Q018,2026-01-30 16:41:00,WhatsApp,Package is stuck at hub for 5 days,Delivery delay
+Q019,2026-02-08 11:37:00,Email,Why is my delivery delayed this week,Delivery delay
+Q020,2026-02-14 13:05:00,Instagram DM,Courier has not moved my order since Friday,Delivery delay
+Q021,2026-02-23 15:29:00,Website Chat,Expected delivery date passed please update,Delivery delay
+Q022,2026-03-04 10:58:00,WhatsApp,Delivery delayed again for BL10840,Delivery delay
+Q023,2026-03-10 18:21:00,Email,Still waiting on delayed order can you escalate,Delivery delay
+Q024,2026-01-08 11:11:00,Website Chat,I want a refund for order BL10350,Refund request
+Q025,2026-01-17 14:25:00,WhatsApp,Please process refund my product arrived too late,Refund request
+Q026,2026-01-28 09:13:00,Email,How can I get money back for cancelled order,Refund request
+Q027,2026-02-04 12:54:00,Instagram DM,Requesting refund due to wrong item received,Refund request
+Q028,2026-02-18 17:39:00,Website Chat,I need refund status for ticket RF2201,Refund request
+Q029,2026-03-01 08:33:00,WhatsApp,Initiate refund for BL10799 please,Refund request
+Q030,2026-03-12 20:16:00,Email,Refund not credited yet can someone check,Refund request
+Q031,2026-01-10 09:02:00,Instagram DM,Protein jar seal was broken when delivered,Product issue
+Q032,2026-01-22 13:18:00,Email,Received damaged bottle in my package,Product issue
+Q033,2026-02-03 16:40:00,Website Chat,The supplement tastes odd compared to last time,Product issue
+Q034,2026-02-11 11:09:00,WhatsApp,Product quality seems poor this batch has clumps,Product issue
+Q035,2026-02-26 15:32:00,Instagram DM,Wrong flavor delivered I ordered chocolate got vanilla,Product issue
+Q036,2026-03-09 10:45:00,Email,My shaker cap is broken please replace,Product issue
+Q037,2026-01-14 08:21:00,Website Chat,I cannot pause my monthly subscription,Subscription issue
+Q038,2026-02-21 12:07:00,WhatsApp,Please cancel my auto renewal plan,Subscription issue
+Q039,2026-02-27 19:55:00,Email,Payment failed at checkout even after retry,Payment failure
+Q040,2026-03-06 14:14:00,Instagram DM,Which protein is best for beginners,General product question

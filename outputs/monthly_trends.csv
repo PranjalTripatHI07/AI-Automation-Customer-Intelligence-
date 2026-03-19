@@ -1,0 +1,17 @@
+predicted_category,timestamp,query_count
+Delivery delay,2026-01-31,4
+Delivery delay,2026-02-28,3
+Delivery delay,2026-03-31,2
+General product question,2026-03-31,1
+Order status,2026-01-31,10
+Order status,2026-02-28,3
+Order status,2026-03-31,1
+Payment failure,2026-02-28,1
+Product issue,2026-01-31,2
+Product issue,2026-02-28,3
+Product issue,2026-03-31,1
+Refund request,2026-01-31,3
+Refund request,2026-02-28,2
+Refund request,2026-03-31,2
+Subscription issue,2026-01-31,1
+Subscription issue,2026-02-28,1

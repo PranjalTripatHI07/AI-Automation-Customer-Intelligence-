@@ -1,0 +1,34 @@
+predicted_category,timestamp,query_count
+Delivery delay,2026-01-11,1
+Delivery delay,2026-01-18,1
+Delivery delay,2026-01-25,1
+Delivery delay,2026-02-01,1
+Delivery delay,2026-02-08,1
+Delivery delay,2026-02-15,1
+Delivery delay,2026-03-01,1
+Delivery delay,2026-03-08,1
+Delivery delay,2026-03-15,1
+General product question,2026-03-08,1
+Order status,2026-01-04,2
+Order status,2026-01-11,3
+Order status,2026-01-18,3
+Order status,2026-01-25,2
+Order status,2026-02-01,1
+Order status,2026-02-15,2
+Order status,2026-03-08,1
+Payment failure,2026-03-01,1
+Product issue,2026-01-11,1
+Product issue,2026-01-25,1
+Product issue,2026-02-08,1
+Product issue,2026-02-15,1
+Product issue,2026-03-01,1
+Product issue,2026-03-15,1
+Refund request,2026-01-11,1
+Refund request,2026-01-18,1
+Refund request,2026-02-01,1
+Refund request,2026-02-08,1
+Refund request,2026-02-22,1
+Refund request,2026-03-01,1
+Refund request,2026-03-15,1
+Subscription issue,2026-01-18,1
+Subscription issue,2026-02-22,1
